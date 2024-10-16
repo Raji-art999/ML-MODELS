@@ -43,18 +43,7 @@ def objective_function(**params):
 
 # Perform Bayesian Optimization
 def bayesian_optimization(search_space, objective_function, n_calls=30, n_initial_points=10):
-    """
-    Perform Bayesian Optimization to find the best hyperparameters.
-    
-    Args:
-    search_space (list): The hyperparameter search space.
-    objective_function (function): The objective function to minimize (negative accuracy).
-    n_calls (int): Number of function evaluations.
-    n_initial_points (int): Number of initial random samples.
-
-    Returns:
-    result: The optimization result with the best hyperparameters.
-    """
+  
     print("Starting Bayesian Optimization...")
     
     result = gp_minimize(
